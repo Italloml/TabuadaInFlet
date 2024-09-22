@@ -30,7 +30,7 @@ def main(page: ft.Page):
     # caixa de input
     caixa_text = ft.TextField(label='Informe a opção', width=400)
     # resultado
-    result_area = ft.Column(controls=[], spacing=10, visible=False)
+    result_area = ft.Column(visible=False)
 
     # botão
     button = ft.ElevatedButton(
@@ -59,9 +59,9 @@ def main(page: ft.Page):
 
 
     container = ft.Column(
-        alignment=ft.MainAxisAlignment.CENTER,
         controls=[row, row_menu, input, result_area],
-        spacing=20
+        spacing=20,
+        alignment=ft.MainAxisAlignment.CENTER,
     )
 
     page.add(container)

@@ -11,15 +11,31 @@ def on_click(number_input, result_area):
         number = int(number_input.value)
         results = calc_tabuada(number)
         
-        # Limpa resultados anteriores
+       # Limpa resultados anteriores
         result_area.controls.clear()
         for result in results:
-            result_area.controls.append(ft.Text(value=result, size=20, color="blue"))
+            result_area.controls.append(
+                ft.Text(
+                value=result, 
+                size=22, 
+                color="black", 
+                weight=ft.FontWeight.BOLD,
+            ))
         
-        result_area.visible = True  # Torna visível após cálculo
+        # Torna visível após cálculo
+        result_area.visible = True  
+
+        # Atualiza a tela para mostrar as mudanças
+        number_input.page.update()
     except ValueError as ve:
-        result_area.controls = [ft.Text(value=str(ve), color="red", size=20)]
+        result_area.controls = [ft.Text(value=str(ve), color="black")]
         result_area.visible = True
+        number_input.page.update()
     except Exception:
-        result_area.controls = [ft.Text(value="Por favor, insira um número válido.", color="red", size=20)]
+        result_area.controls = [
+            ft.Text(value="Por favor, insira um número válido.", 
+            color="black", 
+            size=30
+        )]
         result_area.visible = True
+        number_input.page.update()
