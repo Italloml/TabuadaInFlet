@@ -39,12 +39,12 @@ def main(page: ft.Page):
     )
 
     # centralizads - mensagem e icone
-    row = ft.Row (
+    row = ft.Row(
         alignment=ft.MainAxisAlignment.CENTER,
         controls=[icon, message]
     )
 
-    # menu
+    # menu 
     row_menu = ft.Row(
         controls=[menu],
         spacing=30,
@@ -62,6 +62,7 @@ def main(page: ft.Page):
         controls=[row, row_menu, input, result_area],
         spacing=20,
         alignment=ft.MainAxisAlignment.CENTER,
+        expand=True
     )
 
     page.add(container)
