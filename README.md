@@ -14,3 +14,6 @@ Para a execução do projeto, o arquivo **main.py** é onde está o inicializado
 ```bash
 pip install flet
 ````
+
+## imagem gif
+<img src="Tabuada_python/Assets/tabuada.gif">
